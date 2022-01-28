@@ -9,7 +9,6 @@ class HomePage extends StatelessWidget {
     return  Scaffold(
       appBar: AppBar(
         title: Text('Catalog App'),
-        centerTitle: true,
       ),
       body: Center(
             child: Container(
@@ -17,6 +16,11 @@ class HomePage extends StatelessWidget {
             ),
         ),
       drawer: Drawer(),
+      floatingActionButton: const FloatingActionButton(
+        onPressed: null,
+        child: Icon(Icons.add),
+        tooltip: 'Add',
+      ),
     );
   }
 }
