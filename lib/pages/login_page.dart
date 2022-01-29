@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: const InputDecoration(
+                    decoration:  InputDecoration(
                         hintText: "Enter Username",
                         labelText: "Username"
                     ),
@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     validator: (value) {
                       if(value!.isEmpty) {
-                        return "Passoword can't be empty";
+                        return "Password can't be empty";
                       }
                       else if (value.length > 6) {
                         return "Password should be less than 6 letters";
