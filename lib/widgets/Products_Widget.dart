@@ -3,18 +3,39 @@ import 'package:helloworld/models/catalog.dart';
 
 class  ProductsWidget extends StatelessWidget {
 
-  final Items item;
+  final Products item;
 
   const ProductsWidget({Key? key, required this.item}) :
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-  leading: Image.network(item.image),
-      title: Text(item.name),
-      subtitle: Text(item.desc),
-      trailing: Text(item.price.toString()),
+
+    return Card(
+
+      child: ListTile(
+        onTap: () {
+          print("${item.name} pressed");
+        },
+
+         leading: Image.network(item.image!),
+        title: Text(item.name!),
+        subtitle: Text(item.desc!),
+        trailing: Text(
+          "\$${item.price}",
+          textScaleFactor: 1.2,
+
+          style: TextStyle(
+            color: Colors.deepPurple,
+            fontWeight: FontWeight.bold,
+          ),
+
+
+        ),
+
+
+
+      ),
 
     );
   }

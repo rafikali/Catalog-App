@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iphone 13pro max",
+      "desc": "Introducing to new iphone 13pro max",
+      "price": 200,
+      "color": "black",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1631220221000"
+    },
+    {
+      "id": 2,
+      "name": "Iphone12 pro",
+      "desc": "introducing to new iphone 12pro max",
+      "price": 1222,
+      "color": "black",
+      "image": "https://m.media-amazon.com/images/I/71MHTD3uL4L.jpg"
+
+    },
+    {
+      "id": 3,
+      "name": "Iphone 13 mini",
+      "desc": "introducing to new Iphone 12mini",
+      "price": 1399,
+      "color": "black",
+      "image": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iphone13_hero_09142021_inline.jpg.large.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Iphone 13 pro",
+      "desc": "introducing to new iphone 13pro",
+      "price": 1599,
+      "color": "black",
+      "image": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-13-pro-gallery-2?wid=2824&hei=2400&fmt=jpeg&qlt=80&.v=1631658250000"
+    },
+    {
+      "id": 5,
+      "name": "Iphone 10max",
+      "desc": "introducing to new iphone 10max",
+      "price": 1000,
+      "color": "black",
+      "image": "https://www.gadgetbytenepal.com/wp-content/uploads/2019/12/iPhone-Xs-price-nepal-latest.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Iphone 7plus",
+      "desc": "introducing to new iphone 10max",
+      "price": 1000,
+      "color": "black",
+      "image": "https://www.gadgetbytenepal.com/wp-content/uploads/2019/12/iPhone-Xs-price-nepal-latest.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Macbook Air",
+      "desc": "introducing to new Macbook Air 2021",
+      "price": 1000,
+      "color": "black",
+      "image": "https://itti.com.np/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/m/a/macbook-air-space-gray-select-201810_1.jpeg"
+    },
+    {
+      "id": 8,
+      "name": "Macbook pro",
+      "desc": "introducing to new Macbook Pro",
+      "price": 1000,
+      "color": "black",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632788573000"
+    },
+    {
+      "id": 9,
+      "name": "Mac M1",
+      "desc": "introducing to Macbook M1",
+      "price": 1000,
+      "color": "black",
+      "image": "https://itti.com.np/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/m/a/macbook-air-space-gray-select-201810_1.jpeg"
+    },
+    {
+      "id": 10,
+      "name": "acer nitro 5",
+      "desc": "introducing to acer nitro 5",
+      "price": 1000,
+      "color": "black",
+      "image": "https://itti.com.np/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/a/c/acer-nitro-5_an515-55_rgb-kb_modelpreview_7.png"
+    },
+    {
+      "id": 11,
+      "name": "dell inpiron",
+      "desc": "introducing to dell inspiron",
+      "price": 1000,
+      "color": "black",
+      "image": "https://www.gadgetbytenepal.com/wp-content/uploads/2019/12/iPhone-Xs-price-nepal-latest.jpg"
+    }
+
+  ]
+}
