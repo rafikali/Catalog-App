@@ -4,6 +4,8 @@ import 'package:helloworld/models/catalog.dart';
 import 'package:helloworld/widgets/Products_Widget.dart';
 import 'package:helloworld/widgets/drawer.dart';
 import 'dart:convert';
+import 'package:helloworld/widgets/theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -30,8 +32,9 @@ class _HomePageState extends State<HomePage> {
    final catalogJson = await rootBundle.loadString("assets/files/catalog.json");
    final decodedData = jsonDecode(catalogJson);
    CatalogModels catalogModels = CatalogModels.fromJson(decodedData);
-   var productData = decodedData["products"];
-    models = catalogModels;
+
+    var productData = decodedData["products"];
+   var models = catalogModels;
    _isFetching = false;
 
    setState(() {
@@ -40,56 +43,23 @@ class _HomePageState extends State<HomePage> {
 
   }
 
+
   @override
   Widget build(BuildContext context) {
 
     return  Scaffold(
-      appBar: AppBar(
-        title: const Text('Catalog App',
-          style: TextStyle(
-              color: Colors.black),),
-        centerTitle: true,
+      body: SafeArea(
+        child: Container(
+          padding: EdgeInsets.all(32),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              CatalogHeader(),
+              CatalogList(),
+            ],
+          ),
+        ),
       ),
-
-            body: Padding (
-              padding: EdgeInsets.all(12.0),
-            child: _isFetching ? CircularProgressIndicator(): GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                mainAxisSpacing: 16.0,
-                crossAxisSpacing: 14.0
-
-              ),
-
-              itemCount: models!.products!.length,
-                itemBuilder: (context, index) {
-                    final item = models!.products![index];
-
-                  return Card(
-                    clipBehavior: Clip.antiAlias,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)
-                    ),
-
-                    child: GridTile(
-                      header: Container(
-                        padding: EdgeInsets.all(14),
-                        child: Text(item.name!,
-                          style: TextStyle(color: Colors.white,
-                           ),
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurple,
-                        ),
-                      ),
-                      footer: Text(item.price.toString()),
-                      child: Image.network(item.image!),
-
-                ),
-                  );
-                },
-            ),
-            ),
       drawer: const MyDrawer(),
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
@@ -100,3 +70,69 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+class CatalogList extends StatelessWidget {
+  const CatalogList({Key? key}) : super(key: key);
+
+  get models => null;
+
+  @override
+  Widget build(BuildContext context) {
+
+    return ListView.builder(
+
+        itemCount: models!.product!.length,
+        itemBuilder: (context, index) {
+          final item = models!.products![index];
+          return CatalogItem(item);
+        }
+    );
+  }
+  }
+
+
+class  CatalogItem extends StatelessWidget {
+  final Item products;
+  const (required this.products, {Key? key}) : super(key: key);
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+    color: MyTheme.darkBluishColor,
+    );
+  }
+}
+
+
+
+class CatalogHeader extends StatelessWidget {
+  const CatalogHeader({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Catalog App', style: GoogleFonts.poppins(
+            textStyle: TextStyle(
+              color: MyTheme.darkBluishColor,
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+
+            )
+        ),),
+        const Text('Trending apps',
+          style: TextStyle(
+            fontSize: 20,
+          ),)
+      ],
+    );
+  }
+}
+
+
+
+
+
+

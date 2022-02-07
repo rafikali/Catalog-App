@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "680370699193",
+    "project_id": "catalog-app-validation",
+    "storage_bucket": "catalog-app-validation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680370699193:android:ca5484db40b88a282f9468",
+        "android_client_info": {
+          "package_name": "com.example.helloworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "680370699193-dq0l2o6slegu8uq3fehikmuq64k24pmp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbJzWveE-VvDtd_MaCyUucAxlnZkWx5yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "680370699193-dq0l2o6slegu8uq3fehikmuq64k24pmp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
